@@ -31,8 +31,6 @@
     "n64": "0.0.11"
   },
   "optionalDependencies": {
-    "bcoin-native": "0.0.19",
-    "leveldown": "1.7.0-0",
     "secp256k1": "3.2.5",
     "socket.io": "2.0.1",
     "socket.io-client": "2.0.1"
@@ -52,7 +50,7 @@
     "mocha": "^3.4.1",
     "uglify-js": "^3.0.5"
   },
-  "main": "./compat/bcoin-browser.js",
+  "main": "./compat/bcoin.js",
   "bin": {
     "lcoin-node": "./bin/node",
     "lcoin-spvnode": "./bin/spvnode",
