@@ -23,6 +23,8 @@
     "node": "^4.5.0 || >=5.10.0"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "bn.js": "4.11.6",
     "elliptic": "6.4.0",
     "hmac-drbg": "^1.0.0",
@@ -41,6 +43,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "browserify": "^14.3.0",
     "hash.js": "^1.0.3",
     "jsdoc": "^3.4.3",
@@ -49,7 +52,7 @@
     "mocha": "^3.4.1",
     "uglify-js": "^3.0.5"
   },
-  "main": "./lib/bcoin.js",
+  "main": "./compat/bcoin-browser.js",
   "bin": {
     "lcoin-node": "./bin/node",
     "lcoin-spvnode": "./bin/spvnode",
@@ -101,6 +104,9 @@
     "secp256k1": "./browser/empty.js"
   },
   "browserify": {
-    "transform": ["./browser/transform.js", "babelify"]
+    "transform": [
+      "./browser/transform.js",
+      "babelify"
+    ]
   }
 }
